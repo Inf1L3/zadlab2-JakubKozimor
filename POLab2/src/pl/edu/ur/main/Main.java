@@ -92,14 +92,28 @@ public class Main {
             System.out.println(c);
         }
 
-        
-        int m,n,o;
-        float delta;
-         m= s.nextInt();
-         n= s.nextInt();
-         o= s.nextInt();
-         
-        
+        float m, n, o;
+        float delta, po, pt;
+        m = s.nextFloat();
+        n = s.nextFloat();
+        o = s.nextFloat();
+        delta = n * n - (4 * m * o);
+        if (delta == 0) {
+            po = delta / 2 * m;
+            System.out.println("x0= " + po);
+
+        }
+        if (delta > 0) {
+            po = (-n - delta) / 2 * m;
+            pt = (-n + delta) / 2 * m;
+            System.out.println("x1=" + po);
+            System.out.println("x2=" + pt);
+
+        }
+        if (delta < 0) {
+            System.out.println("delta ujemna");
+        }
+
     }
 
 }
